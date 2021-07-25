@@ -23,18 +23,19 @@ namespace Razor
             };
         }
 
-            public static IEnumerable<Credential> Credentials()
-             {
-                return new List<Credential>
+        public static IEnumerable<Credential> Credentials()
+        {
+            return new List<Credential>
             {
                 new Credential{UserName = "ghidyon", FirstName = "Gideon", LastName = "Akunana", Password = "ghidyon"},
                 new Credential{UserName = "kingalex", FirstName = "Alex", LastName = "Oz", Password = "kingalex"},
                 new Credential{UserName = "queenlovey", FirstName = "Loveth", LastName = "Anosike", Password = "queenlovey"},
-                
+
             };
 
-            }
+        }  
         }
 
     }
-}
+
+

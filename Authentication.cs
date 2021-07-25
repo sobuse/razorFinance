@@ -8,7 +8,7 @@ namespace Razor
 {
     class Authentication
     {
-        private static readonly IEnumerable<Account> _accounts = Databass.Accounts();
+        private static readonly IEnumerable<Account> _accounts = Database.Accounts();
         private static readonly IEnumerable<Credential> _credentials = Database.Credentials();
 
         public static async Task<List<Account>> GetAccountData(string username)
@@ -18,7 +18,7 @@ namespace Razor
         }
         public static async Task<List<Credential>> GetUserCredential(string username)
         {
-            List<Credential> userCredentials = _credentials.Where(data => data.Username.Equals(username.ToLower())).ToList();
+            List<Credential> userCredentials = _credentials.Where(data => data.username.Equals(username.ToLower())).ToList();
             return userCredentials;
         }
         public static async Task<bool> IsValidated(List<Credential> userCredentials, string password)
