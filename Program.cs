@@ -6,7 +6,7 @@ namespace Razor
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Machine.Fire();
         }
     }
 }
